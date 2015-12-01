@@ -1,0 +1,10 @@
+h1 New photo
+
+= form_for @photo do |f|
+  .form-group
+    = f.label :title
+    = f.text_field :title, class: 'form-control', required: true
+  .form-group
+    = f.label :image
+    = f.file_field :image, required: true
+  = f.submit 'Submit', class: 'btn btn-primary btn-lg'
