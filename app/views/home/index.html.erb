@@ -5,7 +5,6 @@
         <ul class="we-create animated fadeInUp delay-1s">
         	<li>Capturing the purest of moments</li>
         </ul>
-            <a class="link animated fadeInUp delay-1s" href="#">Learn More</a>
     </div>
 </div>
 </header><!--header-end-->
@@ -42,32 +41,32 @@
 	</div>
     <div class="portfolioContainer wow fadeInUp delay-04s">
             	<div class=" Portfolio-box printdesign">
-                	<a href="#"><img src="/images/Portfolio-pic1.jpg" alt=""></a>
+                	<a href="#"><%= image_tag("Portfolio-pic1.jpg") %></a>
                 	<h3>Weddings</h3>
                     <p>Print Design</p>
                 </div>
                 <div class="Portfolio-box webdesign">
-                	<a href="#"><img src="/images/Portfolio-pic2.jpg" alt=""></a>
+                	<a href="#"><%= image_tag("Portfolio-pic2.jpg") %></a>
                 	<h3>Family</h3>
                     <p>Web Design</p>
                 </div>
                 <div class=" Portfolio-box branding">
-                	<a href="#"><img src="/images/Portfolio-pic3.jpg" alt=""></a>
+                	<a href="#"><%= image_tag("Portfolio-pic3.jpg") %></a>
                 	<h3>Events</h3>
                     <p>Branding</p>
                 </div>
                 <div class=" Portfolio-box photography" >
-                	<a href="#"><img src="/images/Portfolio-pic4.jpg" alt=""></a>
+                	<a href="#"><%= image_tag("Portfolio-pic4.jpg") %></a>
                 	<h3>Parties</h3>
                     <p>Photography</p>
                 </div>
                 <div class=" Portfolio-box branding">
-                	<a href="#"><img src="/images/Portfolio-pic5.jpg" alt=""></a>
+                	<a href="#"><%= image_tag("Portfolio-pic5.jpg") %></a>
                 	<h3>Boudoir</h3>
                     <p>Branding</p>
                 </div>
                 <div class=" Portfolio-box photography">
-                	<a href="#"><img src="/images/Portfolio-pic6.jpg" alt=""></a>
+                	<a href="#"><%= image_tag("Portfolio-pic6.jpg") %></a>
                 	<h3>Windmills</h3>
                     <p>Photography</p>
                 </div>
@@ -83,7 +82,7 @@
         	<div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
             	<div class="service-list">
                 	<div class="service-list-col1">
-                    	<i class="fa-paw"></i>
+                    	<i class="fa-camera"></i>
                     </div>
                 	<div class="service-list-col2">
                         <h3>Full Day Wedding</h3>
@@ -92,7 +91,7 @@
                 </div>
                 <div class="service-list">
                 	<div class="service-list-col1">
-                    	<i class="fa-gear"></i>
+                    	<i class="fa-birthday-cake"></i>
                     </div>
                 	<div class="service-list-col2">
                         <h3>Half Day Wedding</h3>
@@ -101,7 +100,7 @@
                 </div>
                 <div class="service-list">
                 	<div class="service-list-col1">
-                    	<i class="fa-apple"></i>
+                    	<i class="fa-cutlery"></i>
                     </div>
                 	<div class="service-list-col2">
                         <h3>Full day Wedding (1 photographer)</h3>
@@ -110,7 +109,7 @@
                 </div>
                 <div class="service-list">
                 	<div class="service-list-col1">
-                    	<i class="fa-medkit"></i>
+                    	<i class="fa-photo"></i>
                     </div>
                 	<div class="service-list-col2">
                         <h3>Half Day Wedding (1 photographer)</h3>
@@ -119,7 +118,7 @@
                 </div>
             </div>
             <figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
-            	<img src="/images/macbook-pro.png" alt="">
+            	<%= image_tag("WeddingPackage.jpg") %>
             </figure>
 
         </div>
@@ -132,14 +131,14 @@
 	<div class="container">
     	<div class="row">
 			<figure class="col-lg-5 col-sm-4 wow fadeInLeft">
-            	<img  src="/images/iphone.png" alt="">
+            	<%= image_tag("altPackage.jpg") %>
             </figure>
         	<div class="col-lg-7 col-sm-8 featured-work">
             	<h2>Additional Packages</h2>
             	<P class="padding-b">We also specialize in a variety of other events and professional portaits. Here is a list of a few, if you had something particular in mind, feel free to contact us and we will promptly get back to you.</P>
             	<div class="featured-box">
                 	<div class="featured-box-col1 wow fadeInRight delay-02s">
-                    	<i class="fa-magic"></i>
+                    	<i class="fa-music"></i>
                     </div>
                 	<div class="featured-box-col2 wow fadeInRight delay-02s">
                         <h3>Family Photographs</h3>
@@ -157,7 +156,7 @@
                 </div>
                 <div class="featured-box">
                 	<div class="featured-box-col1 wow fadeInRight delay-06s">
-                    	<i class="fa-dashboard"></i>
+                    	<i class="fa-group"></i>
                     </div>
                 	<div class="featured-box-col2 wow fadeInRight delay-06s">
                         <h3>Boudoir</h3>
@@ -229,7 +228,7 @@ we were well fed and drunk all the time!</p>
             <div class="team-leader-box">
                 <div class="team-leader  wow fadeInDown delay-06s">
                     <div class="team-leader-shadow"><a href="#"></a></div>
-                    <img src="/images/team-leader-pic2.jpg" alt="">
+                    <%= image_tag("nick.jpg") %>
                     <ul>
                         <li><a href="#" class="fa-twitter"></a></li>
                         <li><a href="#" class="fa-facebook"></a></li>
@@ -309,7 +308,6 @@ we were well fed and drunk all the time!</p>
 </div>
 <footer class="footer">
     <div class="container">
-        <div class="footer-logo"><a href="#"><img src="/images/footer-logo.png" alt=""></a></div>
         <span class="copyright">Copyright © 2015 | Designed by <a href="http://abramswebdevelopment.com">AbramsWebDevelopment</a>.</span>
     </div>
     <!--

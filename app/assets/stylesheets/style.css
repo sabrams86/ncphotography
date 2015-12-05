@@ -115,6 +115,7 @@ p{
 	letter-spacing: -1px;
 	margin:0 0 22px 0 ;
 	color:#fff;
+  text-shadow: 2px 2px 2px #bbb;
 }
 
 .we-create{
@@ -128,11 +129,13 @@ p{
 	display:inline-block;
 	font-family: 'Montserrat',sans-serif;
 	font-size:14px;
-	color: #bcbcbc;
+	color: #fff;
 	text-transform: uppercase;
 	font-weight: 400;
 	margin:0 5px 0 0;
 	padding:0 0 0 15px;
+  text-shadow: 2px 2px 2px #bbb;
+
 }
 .we-create li:first-child{
 	background:none;
@@ -284,13 +287,13 @@ color: #fff;
 }
 .featured-box-col2{ overflow:hidden;}
 .featured-box.magic{
-	background:url(../img/magic.png) left top no-repeat;
+	background:url(magic.png) left top no-repeat;
 }
 .featured-box.packaged{
-	background:url(../img/packaged.png) left top no-repeat;
+	background:url(packaged.png) left top no-repeat;
 }
 .featured-box.seo{
-	background:url(../img/seo.png) left top no-repeat;
+	background:url(seo.png) left top no-repeat;
 }
 .Learn-More{
 	display:inline-block;
@@ -405,7 +408,7 @@ img {
 /* Clients
 ---------------------------------*/
 .client-part{
-	background:url(../img/section-bg1.jpg) center center no-repeat;
+	background:url(section-bg1.jpg) center center no-repeat;
 	background-size:cover;
 	padding:55px 0;
 	text-align:center;
@@ -595,7 +598,7 @@ border: 2px solid #fff;
 /* Talk Business
 ---------------------------------*/
 .business-talking{
-	background:url(../img/section-bg2.jpg) top center no-repeat;
+	background:url(section-bg2.jpg) top center no-repeat;
 	background-size:cover;
 	padding:60px 0 10px;
 	text-align:center;
@@ -618,7 +621,7 @@ border: 2px solid #fff;
 }
 
 .main-section.contact{
-	background:url(../img/bg-map.png) left 190px no-repeat;
+	background:url(bg-map.png) left 190px no-repeat;
 }
 .contact-info-box{
 	font-size:15px;
@@ -744,7 +747,6 @@ border: 2px solid #fff;
 ---------------------------------*/
 
 .footer{
-	background:url(../img/pw_maze_black_2X.png) left top repeat;
 	padding:35px 0 35px;
 }
 .footer-logo{
