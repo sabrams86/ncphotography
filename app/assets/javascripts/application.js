@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require bootstrap
 //= require classie
 //= require html5element
 //= require html5shiv
