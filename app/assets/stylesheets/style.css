@@ -90,7 +90,7 @@ p{
 
 .header{
 	text-align:center;
-	background-image:url(flowers.jpg);
+	background-image:url('flowers.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -400,7 +400,7 @@ img {
 /* Clients
 ---------------------------------*/
 .client-part{
-	background:url(section-bg1.jpg) center center no-repeat;
+	background:url('section-bg1.jpg') center center no-repeat;
 	background-size:cover;
 	padding:55px 0;
 	text-align:center;
@@ -590,7 +590,7 @@ border: 2px solid #fff;
 /* Talk Business
 ---------------------------------*/
 .business-talking{
-	background:url(section-bg2.jpg) top center no-repeat;
+	background:url('section-bg2.jpg') top center no-repeat;
 	background-size:cover;
 	padding:60px 0 10px;
 	text-align:center;
