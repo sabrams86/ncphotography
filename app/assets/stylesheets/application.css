@@ -13,5 +13,6 @@
  *= require_tree .
  *= require_self
  *= require animate
- *= require responsive
+ *= require semantic-ui.min
+ *= require semantic-tab
  */

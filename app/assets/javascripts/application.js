@@ -14,10 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require classie
-//= require html5element
-//= require html5shiv
-//= require jquery-scrolltofixed
-//= require jquery.isotope
-//= require respond-1.1.0.min
-//= require wow
+//= require semantic-ui.min
+//= require semantic-tab

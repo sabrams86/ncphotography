@@ -1,0 +1,169 @@
+header class="header" id="header"
+	.ui.container
+		h1 Nick Coffey Photography
+		ul
+			li Capturing the purest of moments
+		a class="animated fadeInUp delay white" href="#Portfolio"
+			i class="fa fa-arrow-down fa-5x"
+
+.ui.container
+	.ui-main
+		ul class="main-nav"
+			li
+				a href="#header">Home
+			li
+				a href="#Portfolio">Portfolio
+			li
+				a href="#packages">Packages
+			li
+				a href="#about">About
+			li
+				a href="#contact">Contact
+		a class="res-nav_click" href="#"
+			i class="fa-bars"
+
+section class="main-section paddind" id="Portfolio"
+	.ui.container
+		- @albums.each do |album|
+			button class="btn btn-success" type="button" data-toggle="collapse" data-target="#{album.name}" aria-expanded="false" aria-controls="#{album.name}"
+				= album.name
+		- @albums.each do |album|
+			.collapse id="#{album.name}"
+				.well
+					-album.photos.each do |photo|
+						= link_to image_tag(photo.image.thumb('180x180#').url, alt: photo.title, class: 'img-thumbnail'), photo.image.url, target: '_blank'
+
+section class="main-section" id="packages"
+	.ui.container
+	h2 Wedding Packages
+	h6 The following pre-determined packages are available for your convenience.  Please contact us for custom options.
+	.row
+		.col-lg-4.col-sm-6.fadeInLeft.delay
+			.service-list
+				.service-list-col1
+					i class="fa-camera"
+				.service-list-col2
+					h3 Full Day Wedding
+					p Two photographers, 1200 high resolution digital photographs, 8 hours
+			.service-list
+				.service-list-col1
+					i class="fa-birthday-cake"
+				.service-list-col2
+					h3 Half Day Wedding
+					p Two photographers, 800 high resolution digital photographs, 5 hours
+			.service-list
+				.service-list-col1
+					i class="fa-cutlery"
+				.service-list-col2
+					h3 Full day Wedding (1 photographer)
+					p One photographer, 800 high resolution digital photographs, 8 hours
+			.service-list
+				.service-list-col1
+					i class="fa-photo"
+				.service-list-col2
+					h3 Half Day Wedding (1 photographer)
+					p One photographer, 800 high resolution digital photographs, 8 hours
+		figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay"
+			= image_tag("WeddingPackage.jpg") 
+
+section class="main-section alabaster"
+	.ui.container
+		.row
+			figure class="col-lg-5 col-sm-4 wow fadeInLeft">
+				= image_tag("altPackage.jpg")
+			.ol-lg-7.col-sm-8.featured-work
+				h2 Additional Packages
+				p class="padding-b"
+					| We also specialize in a variety of other events and professional portaits. Here is a list of a few, if you had something particular in mind, feel free to contact us and we will promptly get back to you.
+				.featured-box
+					.featured-box-col1.fadeInRight.delay
+						i class="fa-music"
+					.featured-box-col2.fadeInRight.delay
+						h3 Family Photographs
+						p One to three hour session at a location of your choice.
+				.featured-box
+					.featured-box-col1.fadeInRight.delay
+						i class="fa-gift"
+					.featured-box-col2.fadeInRight.delay
+						h3 Event Photographs
+						p Capture your events whether professional or casual.
+				.featured-box
+					.featured-box-col1.fadeInRight.delay
+						i class="fa-group"
+					.featured-box-col2.fadeInRight.delay
+						h3 Boudoir
+						p Give a special gift to your special someone
+				a class="Learn-More" href="#" Learn More
+
+section class="main-section team" id="about"
+	.ui.container
+		h2 I'm Nick
+		<h6>A bit about who I am and why I love photography.
+		.team-leader-block clearfix"
+			.team-leader-box"
+				.wow fadeInDown delay"
+					= image_tag("nick.jpg")
+				h3 class="wow fadeInDown delay" Nick Coffey
+				span class="wow fadeInDown delay" Lead Photographer, Owner
+				p class="wow fadeInDown delay" 
+					| I'm pretty good at photos.  They are fun to take and I will take them of you if you want.
+			.team-leader-box
+				p class="wow fadeInDown delay"
+					| As a native, I have spent plenty of time experiencing the many sights and sounds that Colorado has to offer. I enjoy getting up to the high country, be it for skiing, snowboarding, or just to enjoy all the great landscapes. I'm a big fan of backyard barbecues, relaxing at a park, or checking out one of the many breweries Denver has to offer. Whatever it may be, I enjoy taking it all in, and am always toting my camera around to capture it.
+			.team-leader-box
+				p class="wow fadeInDown delay"
+					| I'm always excited to sit down and work with new clients.  I love all types of projects and enjoy a new challenge everyday. Maybe it's capturing those little smirks a bride shares when she sees her husband for the first time on their wedding day. It's about making something as memorable as possible, or portraying a certain message through a photograph.  I'm always ready for an adventure or to seek out that perfect spot for a shoot. It's always a journey, and I would absolutely love the opportunity to capture your day.
+
+section class="business-talking"
+	.ui.container
+		h2 Contact me:
+.ui.container
+#contact.main-section.contact
+	.row
+		.col-lg-6.col-sm-7.fadeInLeft
+			.contact-info-box.address.clearfix
+				h3
+					i class="icon-map-marker"
+					| Address:
+				span 
+					| 3234 Something Ln
+					br
+					| Littleton, Colorado, 80123.
+			.contact-info-box.phone.clearfix
+				h3
+					i class="fa-phone"
+					| Phone:
+				span 303-383-2345
+			.contact-info-box.email.clearfix
+				h3
+					i class="fa-pencil"
+					| Email:
+				span 
+					| nickcoffey@gmail.com
+			.contact-info-box.hours.clearfix
+				h3
+					i class="fa-clock-o"
+					| Hours:
+				span
+					strong Monday - Thursday: 10am - 6pm
+					br
+					strong Friday: People work on Fridays now?
+					br
+					strong Saturday - Sunday: Best not to ask.
+			ul class="social-link">
+				li class="facebook"
+					a href="https://www.facebook.com/NickCoffeyPhotography" target="_blank"
+						i class="fa fa-facebook"
+				li class="pinterest"
+					a href="https://www.instagram.com/coffeyandphotos/" target="_blank"
+						i class="fa fa-instagram"
+		.col-lg-6.col-sm-5.fadeInUp.delay-05s
+			.form
+				input class="input-text" type="text" name="" value="Your Name" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"
+				input class="input-text" type="text" name="" value="Your E-mail" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"
+				textarea class="input-text text-area" cols="0" rows="0" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" Your Message
+				input class="input-btn" type="submit" value="send message"
+footer class="footer">
+.ui.container
+	span class="copyright" Copyright © 2016 
+		a class="green" href="http://abramswebdevelopment.com" AbramsWebDevelopment
