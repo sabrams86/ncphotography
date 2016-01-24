@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  resources :photos, only: [:new, :create, :index]
+  resources :photos
+  resources :albums
   root to: "home#index"
 
   # Example of regular route:

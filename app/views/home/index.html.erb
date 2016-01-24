@@ -26,54 +26,69 @@
 </nav><!--main-nav-end-->
 
 <section class="main-section paddind" id="Portfolio"><!--main-section-start-->
+	<% @albums.each do |album| %>
+		<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#<%=album.name%>" aria-expanded="false" aria-controls="<%=album.name%>"><%= album.name %></button>
+	<% end %>
+	<% @albums.each do |album| %>
+		<div class="collapse" id="<%=album.name%>"></div>
+			<div class="well">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Photo</th>
+							<th>Name</th>
+							<th>Album</th>
+							<th>Options</th>
+						</tr>
+					</thead>
+					<tbody>
+					<% album.photos.each do |photo| %>
+						<tr>
+							<td>
+								<%= link_to image_tag(photo.image.thumb('180x180#').url, alt: photo.title, class: 'img-thumbnail'), photo.image.url, target: '_blank'%>
+							</td>
+							<td>
+								<%= photo.title%>
+							</td>
+							<td>
+								<%= album.name%>
+							</td>
+					<% end %>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	<% end %>
+
+
+
 	<div class="container">
     	<h2>Portfolio</h2>
     	<h6>Fresh portfolio of designs that will keep you wanting more.</h6>
       <div class="portfolioFilter">
         <ul class="Portfolio-nav wow fadeIn delay-02s">
-        	<li><a href="#" data-filter="*" class="current" >Weddings</a></li>
-            <li><a href="#" data-filter=".webdesign" >Corporate Events</a></li>
-            <li><a href="#" data-filter=".printdesign" >Parties</a></li>
-            <li><a href="#" data-filter=".photography" >Family</a></li>
-            <li><a href="#" data-filter=".branding" >Boudoir</a></li>
+					<% @albums.each do |album| %>
+        		<li><a href="#" data-filter=".<%= album.name %>" ><%= album.name %></a></li>
+					<% end %>
         </ul>
        </div>
 
 	</div>
-    <div class="portfolioContainer wow fadeInUp delay-04s">
-            	<div class=" Portfolio-box printdesign">
-                	<a href="#"><%= image_tag("Portfolio-pic1.jpg") %></a>
-                	<h3>Weddings</h3>
-                    <p>Print Design</p>
-                </div>
-                <div class="Portfolio-box webdesign">
-                	<a href="#"><%= image_tag("Portfolio-pic2.jpg") %></a>
-                	<h3>Family</h3>
-                    <p>Web Design</p>
-                </div>
-                <div class=" Portfolio-box branding">
-                	<a href="#"><%= image_tag("Portfolio-pic3.jpg") %></a>
-                	<h3>Events</h3>
-                    <p>Branding</p>
-                </div>
-                <div class=" Portfolio-box photography" >
-                	<a href="#"><%= image_tag("Portfolio-pic4.jpg") %></a>
-                	<h3>Parties</h3>
-                    <p>Photography</p>
-                </div>
-                <div class=" Portfolio-box branding">
-                	<a href="#"><%= image_tag("Portfolio-pic5.jpg") %></a>
-                	<h3>Boudoir</h3>
-                    <p>Branding</p>
-                </div>
-                <div class=" Portfolio-box photography">
-                	<a href="#"><%= image_tag("Portfolio-pic6.jpg") %></a>
-                	<h3>Windmills</h3>
-                    <p>Photography</p>
-                </div>
-    </div>
+  <div class="portfolioContainer wow fadeInUp delay-04s">
+		<% @albums.each do |album| %>
+    	<div class=" Portfolio-box printdesign">
+      	<a href="#"><%= image_tag(album.photos[0].image.thumb('180x180#').url, alt: album.photos[0].title, class: 'img-thumbnail') %></a>
+      	<h3><%= album.name %></h3>
+        <p><%= album.name %></p>
+      </div>
+		<% end %>
+              <!-- <div class="Portfolio-box webdesign">
+              	<a href="#"><%= image_tag("Portfolio-pic2.jpg") %></a>
+              	<h3>Family</h3>
+                  <p>Web Design</p>
+              </div> -->
+  </div>
 </section><!--main-section-end-->
-
 
 <section class="main-section" id="packages"><!--main-section-start-->
 	<div class="container">

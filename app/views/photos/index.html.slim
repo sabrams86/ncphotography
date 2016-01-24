@@ -1,11 +1,53 @@
-h1 List of photos
-
-= link_to 'Add your photo', new_photo_path, class: 'btn btn-lg btn-primary'
-
-ul class="row" id="photos-list"
-  - @photos.each do |photo|
-    li class="col-xs-3"
-      = link_to image_tag(photo.image.thumb('180x180#').url, alt: photo.title, class: 'img-thumbnail'),
-                  photo.image.url, target: '_blank'
-      p
-        = photo.title
+.container
+  h1 Admin Photo Settings
+  - flash.each do |name, msg|
+    div class="<%= name %>"
+      = msg
+  .row
+    .col-sm-6
+      h4 Upload Photo
+      = form_for @photo do |f|
+        .form-group
+          = f.label :title
+          = f.text_field :title, class: 'form-control', required: true
+        .form-group
+          = f.label :album
+          = f.collection_select(:album_id, Album.all, :id, :name)
+        .form-group
+          = f.label :image
+          = f.file_field :image, required: true
+        = f.submit 'Add Photo', class: 'btn btn-primary'
+    .col-sm-6
+      h4 Add New Album
+      = form_for @album do |f|
+        .form-group
+          = f.label :name
+          = f.text_field :name, class: 'form-control', required: true
+        = f.submit 'Add Album', class: 'btn btn-primary'
+  .row    
+    - @albums.each do |album|
+      button class="btn btn-success" type="button" data-toggle="collapse" data-target="##{album.name}" aria-expanded="false" aria-controls="#{album.name}"
+        = album.name
+    - @albums.each do |album|
+      .collapse id="#{album.name}"
+        .well
+          table.table.table-striped
+            thead
+              tr
+                th Photo
+                th Name
+                th Album
+                th Options
+            tbody
+            - album.photos.each do |photo|
+              tr
+                td 
+                  = link_to image_tag(photo.image.thumb('180x180#').url, alt: photo.title, class: 'img-thumbnail'),
+                            photo.image.url, target: '_blank'
+                td 
+                  = photo.title
+                td
+                  = album.name
+                td
+                  = link_to 'Delete',  { action: :destroy, id: photo.id }, method: :delete, class: 'btn btn-sm btn-danger' 
+          = link_to 'Delete',  { controller: :albums, action: :destroy, id: album.id }, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' 
