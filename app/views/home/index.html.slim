@@ -5,8 +5,9 @@ header class="header" id="header"
 		.center
 			a class="center animated fadeInDown delay white" href="#Portfolio"
 				i class="center fa fa fa-arrow-down fa fa-5x"
-
-.ui.borderless.main.menu.fixed
+script
+	| $('.slider').glide();
+.ui.borderless.main.menu.fixed.overlay
 	.ui.text.container
 			a.item.center href="#header" Home
 			a.item.center href="#Portfolio" Portfolio
@@ -119,55 +120,42 @@ section class="business-talking"
 .ui.container
 	#contact.main-section.contact
 		.row
+			.center.ui.grid
+				.four.wide.column
+				.eight.wide.column
+					.ui.form
+						.field
+							input class="input-text" type="text" name="" value="Your Name" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"
+						.field
+							input class="input-text" type="text" name="" value="Your E-mail" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"
+						.field
+							textarea class="input-text text-area" cols="0" rows="0" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" Your Message
+						button.ui.blue.button type="submit" Send Message
+			br
 			.col-lg-6.col-sm-7.fadeInLeft
-				.contact-info-box.address.clearfix
-					h3
-						i class="icon-map-marker"
-						| Address:
-					span 
-						| 3234 Something Ln
-						br
-						| Littleton, Colorado, 80123.
-				.contact-info-box.phone.clearfix
+				.center
 					h3
 						i class="fa fa-phone"
-						| Phone:
+						|  Phone:
 					span 303-383-2345
-				.contact-info-box.email.clearfix
+				br
+				.center
 					h3
 						i class="fa fa-pencil"
-						| Email:
-					span 
-						| nickcoffey@gmail.com
-				.contact-info-box.hours.clearfix
-					h3
-						i class="fa fa-clock-o"
-						| Hours:
-					span
-						strong Monday - Thursday: 10am - 6pm
-						br
-						strong Friday: People work on Fridays now?
-						br
-						strong Saturday - Sunday: Best not to ask.
-				ul class="social-link"
-					li class="facebook"
-						a href="https://www.facebook.com/NickCoffeyPhotography" target="_blank"
+						|  Email:
+					span nickcoffey@gmail.com
+				.social-media	
+					a href="https://www.facebook.com/NickCoffeyPhotography" target="_blank"
+						.media.facebook
 							i class="fa fa fa-facebook"
-					li class="pinterest"
-						a href="https://www.instagram.com/coffeyandphotos/" target="_blank"
+					| &nbsp;&nbsp;
+					a href="https://www.instagram.com/coffeyandphotos/" target="_blank"
+						.media.instagram
 							i class="fa fa fa-instagram"
-			.col-lg-6.col-sm-5.fadeInUp.delay-05s
-				.form
-					input class="input-text" type="text" name="" value="Your Name" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"
-					input class="input-text" type="text" name="" value="Your E-mail" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"
-					textarea class="input-text text-area" cols="0" rows="0" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" Your Message
-					input class="input-btn" type="submit" value="send message"
-footer class="footer"
+footer.footer.center
 	.ui.container
-		span class="copyright" 
-		  | Copyright © 2016 
-			a.green href="http://abramswebdevelopment.com" 
-			  | AbramsWebDevelopment
+		span.copyright Copyright © 2016 
+		a href="http://abramswebdevelopment.com" AbramsWebDevelopment
 
 - @albums.each do |album|
 	- album.photos.each do |photo|
@@ -184,4 +172,4 @@ footer class="footer"
 script
   | $('.tabular.menu .item').tab();
   |	$('.main.menu').visibility({ type: 'fixed'});
-  | $('.overlay').visibility({type: 'fixed',offset: 80});
+  | $('.overlay').visibility({type: 'fixed', offset: 0});

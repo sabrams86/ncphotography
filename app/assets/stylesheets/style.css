@@ -43,3 +43,25 @@ h2 {
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
+.social-media {
+	font-size: 2em;
+	text-align: center;
+	padding: 15px;
+}
+.media.facebook {
+	background-color: #4867AA;
+}
+.media.instagram {
+	background-color: brown;
+}
+.media i{
+	padding-top: .5em;
+	color: white;
+}
+.media {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	background-color: grey;
+	border-radius: 1em;
+}
